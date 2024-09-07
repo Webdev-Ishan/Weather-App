@@ -1,22 +1,10 @@
-const url = 'https://open-weather13.p.rapidapi.com/city/Dehradun/IN';
-const options = {
-	method: 'GET',
-	headers: {
-		'x-rapidapi-key': '9dfe568403msha805e14e378e183p18126djsn0fbc6e563ef1',
-		'x-rapidapi-host': 'open-weather13.p.rapidapi.com'
-	}
-};
+const apikey="60d42902a9996ed1a2ab9178ad948f02";
+const apiurl="https://api.openweathermap.org/data/2.5/weather?&units=metric&q=bangalore";
 
-
-async function fetchdata() {
-	
-
-try {
-	const response = await fetch(url, options);
-	const result = await response.text();
-	console.log(result);
-} catch (error) {
-	console.error(error);
+async function CheckWeather() {
+	const response= await fetch(apiurl+`&appid=&{apikey}`);
+	var data=await response.json();
+	console.log(data)
 }
-}
-fetchdata();
+
+CheckWeather()
