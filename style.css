@@ -118,3 +118,8 @@ body{
   .weather-data{
     background-color: white;
   }
+
+  td:hover{
+    background-color: black;
+    color: white;
+  }
